@@ -1,5 +1,6 @@
 #include <LiquidCrystal.h>
 
+float distancia = 0;
 LiquidCrystal lcd(12, 11, 10, 5, 4, 3, 2);//Declara o lcd e suas entradas
 long readUltrasonicDistance(int triggerPin, int echoPin)// Define as leituras do sensor como long, variável que pode armazenar até 32 bits de dado 
 {
@@ -25,5 +26,29 @@ void setup() {
 
 void loop() {
   // put your main code here, to run repeatedly:
+  chegarAoLocal();
+  distancia = readUltrasonicDistance(9 , 8 );
+  lcd.setCursor(0,0);
+  lcd.print("Distancia = ");
+  lcd.setCursor(0,1);
+  lcd.print(distancia);
+  delay(1000);
+  lcd.clear();
+}
 
+void chegarAoLocal()
+{
+  if(distancia <= 1000)
+  {
+    lcd.clear();
+    lcd.setCursor(0,0);
+    lcd.print("Lembre-se de");
+    lcd.setCursor(0,1);
+    lcd.print("evitar sacolas");
+    delay(500);
+    lcd.clear();
+    lcd.setCursor(0,0);
+    lcd.write("plasticas");    
+    delay(250);
+  }  
 }
