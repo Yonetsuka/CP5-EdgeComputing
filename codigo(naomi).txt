@@ -1,2 +1,0 @@
-db062b64-bf50-4b30-bdc6-b02659738d75 (id do dispositivo)
-LZE2YDJKQZVMLQBYX8MV (chave secreta)
