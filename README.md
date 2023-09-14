@@ -1,5 +1,8 @@
 # Guia para Implantação de Contêineres Docker e Execução de Health Check
 Este repositório fornece instruções passo a passo sobre como implantar contêineres Docker em uma máquina virtual e como executar um health check usando o Postman.
+
+*Observação: Devido a problemas técnicos, foi utilizado em uma maquina local para instalação do dockers e do git*
+
 # Passo 1
 
 Instale a maquina virtual VMware e imagem do ubunto 22.04 LTS
@@ -42,5 +45,3 @@ Ao abrir o terminal, executar os comandos:
 # Passo 7
 
 Ao subir os containers, abrir o postman e executar o comando de health check, colocando o IP da máquina virtual no url. Ao fazer isso, o postman irá receber uma mensagem sinalizando que os containers está ativo.
-
-*Observação: Devido a problemas técnicos, foi utilizado em uma maquina local para instalação do dockers e do git*
