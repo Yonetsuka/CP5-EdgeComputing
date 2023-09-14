@@ -42,3 +42,5 @@ Ao abrir o terminal, executar os comandos:
 # Passo 7
 
 Ao subir os containers, abrir o postman e executar o comando de health check, colocando o IP da máquina virtual no url. Ao fazer isso, o postman irá receber uma mensagem sinalizando que os containers está ativo.
+
+*Observação: Devido a problemas técnicos, foi utilizado em uma maquina local para instalação do dockers e do git*
