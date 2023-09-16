@@ -1,4 +1,18 @@
-# Guia para Implantação de Contêineres Docker e Execução de Health Check
+# Sprint 3 Challenge IBM
+# Membros:
+- Allan Von Ivanov RM: 98705
+- Cássio Yonetsuka RM: 99678
+- Guilherme Braziolli RM: 98237
+- Lourenzo Ramos RM: 99951
+- Matheus Cavasini RM: 97722
+
+# IOT e Fiware
+A palavra IOT vem de Internet of Things, que por sua vez significa internet das coisas. Esse conceito se refere auma rede de objetos fisicos, dispositivos, máquinas e outros itens que estão conectados a internet coletar, transmitir e trocar dados entre si e com outros sistemas de computação. Quanto ao Fiware, ele é uma plataforma com o código aberto para ajudar inegrar e gerenciar dados IOT. Seus componentes mais importantes são Context Broker e o IOT agent. O Broker serve para armazenar e gerenciar os dados enquanto o IOT agent facilitam a comunicação com os dispositivos, podendo usar vários protocolos no processo, como o MQTT e o ORION.
+
+# Objetivo do repositório
+Neste repositório, estará sendo mostrado o como subir um servidor utilizando o dockers e o repositório do professor Fabio Cabrini. Haverá duas formas, sendo uma com o auxilio do VMware e a outra utilizando a máquina local.
+
+# Guia para Implantação de Contêineres Docker e Execução de Health Check **(Máquina Virtual/VMware)**
 Este repositório fornece instruções passo a passo sobre como implantar contêineres Docker em uma máquina virtual e como executar um health check usando o Postman.
 
 *Observação: Devido a problemas técnicos, foi utilizado em uma maquina local para instalação do dockers e do git*
@@ -45,3 +59,24 @@ Ao abrir o terminal, executar os comandos:
 ## Passo 7
 
 Ao subir os containers, abrir o postman e executar o comando de health check, colocando o IP da máquina virtual no url. Ao fazer isso, o postman irá receber uma mensagem sinalizando que os containers está ativo.
+
+# Guia para Implantação de Contêineres Docker e Execução de Health Check **(Máquina Local)**
+
+## Passo 1
+
+Tenha o gitBash, o software do postman e o docker desktop instalados e funcionando no seu computador
+
+## Passo 2
+Abra o prompt de comando e selecione a pasta que deseja utilizar
+
+## Passo 3
+Execute os seguintes comandos:
+- git clone https://github.com/fabiocabrini/fiware
+- cd fiware
+- docker compose up -d
+
+## Passo 4
+Após isso, vá até o repositório do fiware do professor Cabrini e baixe a collection do postman importe para o software
+
+## Passo 5
+Por fim, abra as três pastas e procure a opção de Health Check, substitual URL por localhost (isso só funcionará caso o postman esteja baixado) e execute. Ao fazer isso, o postman irá receber uma mensagem sinalizando que os containers está ativo.
