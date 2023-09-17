@@ -84,13 +84,8 @@ Por fim, abra as três pastas e procure a opção de Health Check, substitual UR
 ### Links usados 
 
 - Link de video ensinando a subir na máquina local: https://www.youtube.com/watch?v=MFZwQOKKtlI
-- 
 - Link do gitbash: https://git-scm.com/downloads
-- 
 - Link do VMware : https://www.vmware.com/br/products/workstation-player.html
-- 
 - Link do Ubuntu: https://ubuntu.com/download/desktop
-- 
 - Link do docker: https://www.docker.com/products/docker-desktop/
-- 
 - Link do repositório do professor: https://github.com/fabiocabrini/fiware
