@@ -81,6 +81,12 @@ Após isso, vá até o repositório do fiware do professor Cabrini e baixe a col
 ## Passo 5
 Por fim, abra as três pastas e procure a opção de Health Check, substitual URL por localhost (isso só funcionará caso o postman esteja baixado) e execute. Ao fazer isso, o postman irá receber uma mensagem sinalizando que os containers está ativo.
 
+# MyMqtt
+Este é um aplicativo para celular que usa o protocolo mqtt, e pode ser usado para enviar e receber mensagens em uma porta de um endereço de broker, broker este que funciona como servidor que gerencia a troca de mensagens. Ele será usado no projeto como uma forma de estabelecer uma comunicação entre o usuário e o esp 32 desde que possua internet
+
+# Explicando o código cp
+Primeiro, deve se importar as bibliotecas WiFi e PbSubClient. Depois se define os tópicos, que é a principal forma para o publisher e o subscriber trocarem mensagens. Em seguida, se coloca o nome da rede e senha que deseja conectar o esp, junto com o endereço e porta do broker. Por fim, para fazer o esp 32 enviar mensagens para o subscriber se utiliza o comando MQTT.publish(tópico que deseja utilizar, mensagem/string que deseja enviar). 
+
 ### Links usados 
 
 - Link de video ensinando a subir na máquina local: https://www.youtube.com/watch?v=MFZwQOKKtlI
