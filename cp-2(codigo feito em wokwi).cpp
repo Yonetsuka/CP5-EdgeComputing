@@ -20,7 +20,7 @@ float humidade;
 #define TOPICO_PUBLISH_3    "/TEF/lamp101/attrs/h"
 
 // WIFI
-const char* SSID = ""; // SSID / nome da rede WI-FI que deseja se conectar
+const char* SSID = "Wokwi-GUEST"; // SSID / nome da rede WI-FI que deseja se conectar
 const char* PASSWORD = ""; // Senha da rede WI-FI que deseja se conectar
 
 // MQTT
@@ -38,7 +38,7 @@ int D4 = 2;
 const int DHT_PIN = 15;
 #define BUZZ_PIN 25
 #define GLED_PIN 5
-#define YLED_PIN 5
+#define YLED_PIN 4
 #define RLED_PIN 23
 
 DHTesp dhtSensor;
@@ -48,6 +48,7 @@ void mqtt_callback(char* topic, byte* payload, unsigned int length);
 void setup() {
   // put your setup code here, to run once:
   Serial.begin(115200);
+  initWiFi();
   pinMode(GLED_PIN, OUTPUT);
   pinMode(YLED_PIN, OUTPUT);
   pinMode(RLED_PIN, OUTPUT);
@@ -63,7 +64,7 @@ void setup() {
   pinMode(LDR_PIN, INPUT);
   initMQTT();
 }
-/*void initWiFi() 
+void initWiFi() 
 {
     delay(10);
     Serial.println("------Conexao WI-FI------");
@@ -72,8 +73,8 @@ void setup() {
     Serial.println("Aguarde");
      
     reconectWiFi();
-}*/
-/*
+}
+
 void reconectWiFi() 
 {
     //se já está conectado a rede WI-FI, nada é feito. 
@@ -81,7 +82,7 @@ void reconectWiFi()
     if (WiFi.status() == WL_CONNECTED)
         return;
          
-    WiFi.begin(SSID, PASSWORD); // Conecta na rede WI-FI
+    WiFi.begin(SSID, PASSWORD, 6); // Conecta na rede WI-FI
      
     while (WiFi.status() != WL_CONNECTED) 
     {
@@ -94,7 +95,7 @@ void reconectWiFi()
     Serial.print(SSID);
     Serial.println("IP obtido: ");
     Serial.println(WiFi.localIP());
-}*/
+}
 
 
 void reconnectMQTT() 
@@ -157,6 +158,7 @@ void mqtt_callback(char* topic, byte* payload, unsigned int length)
 
 void loop() {
   // put your main code here, to run repeatedly:
+  //decleração de chars
   char msgBuffer2[4];
   char msgBuffer3[4];
   //luminosidade
@@ -239,4 +241,6 @@ void loop() {
   MQTT.publish(TOPICO_PUBLISH_3,msgBuffer3);
   delay(2000);
   noTone(BUZZ_PIN);
+  //keep alive mqtt
+  MQTT.loop();
 }
