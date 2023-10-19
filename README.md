@@ -87,6 +87,9 @@ Este é um aplicativo para celular que usa o protocolo mqtt, e pode ser usado pa
 # Explicando o código cp
 Primeiro, deve se importar as bibliotecas WiFi e PbSubClient. Depois se define os tópicos, que é a principal forma para o publisher e o subscriber trocarem mensagens. Em seguida, se coloca o nome da rede e senha que deseja conectar o esp, junto com o endereço e porta do broker. Por fim, para fazer o esp 32 enviar mensagens para o subscriber se utiliza o comando MQTT.publish(tópico que deseja utilizar, mensagem/string que deseja enviar). 
 
+# Montagem do ESP
+Ao montar o esp, conectou-se 5, 4 e 23. O LCD teve as portas sda e scl conectadas nas portas 21 e 22 e o gnd e vcc no terra e no 3.3v. O DHT foi conectado a porta 15 e ao terra e 3.3v também. O fotoresistor foi conectado ao terra, o 3.3 volts e a porta 2. O buzzer foi conectado ao terra e porta 25.
+
 ### Links usados 
 
 - Link de video ensinando a subir na máquina local: https://www.youtube.com/watch?v=MFZwQOKKtlI
