@@ -98,3 +98,4 @@ Ao montar o esp, conectou-se 5, 4 e 23. O LCD teve as portas sda e scl conectada
 - Link do Ubuntu: https://ubuntu.com/download/desktop
 - Link do docker: https://www.docker.com/products/docker-desktop/
 - Link do repositório do professor: https://github.com/fabiocabrini/fiware
+- Link do Wokwi: https://wokwi.com/projects/378106750832946177
