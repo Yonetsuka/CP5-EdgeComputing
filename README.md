@@ -1,4 +1,4 @@
-# Sprint 3 Challenge IBM
+# CP
 # Membros:
 - Allan Von Ivanov RM: 98705
 - Cássio Yonetsuka RM: 99678
