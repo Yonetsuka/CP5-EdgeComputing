@@ -85,7 +85,11 @@ Por fim, abra as três pastas e procure a opção de Health Check, substitual UR
 Este é um aplicativo para celular que usa o protocolo mqtt, e pode ser usado para enviar e receber mensagens em uma porta de um endereço de broker, broker este que funciona como servidor que gerencia a troca de mensagens. Ele será usado no projeto como uma forma de estabelecer uma comunicação entre o usuário e o esp 32 desde que possua internet
 
 # Explicando o código cp
-Primeiro, deve se importar as bibliotecas WiFi e PbSubClient. Depois se define os tópicos, que é a principal forma para o publisher e o subscriber trocarem mensagens. Em seguida, se coloca o nome da rede e senha que deseja conectar o esp, junto com o endereço e porta do broker. Por fim, para fazer o esp 32 enviar mensagens para o subscriber se utiliza o comando MQTT.publish(tópico que deseja utilizar, mensagem/string que deseja enviar). 
+Primeiro, deve se importar as bibliotecas WiFi e PubSubClient.
+Depois se define os tópicos, que é a principal forma para o publisher e o subscriber trocarem mensagens. Também será necessário definir uma id no código (no caso, 112). 
+Em seguida, se coloca o nome da rede e senha que deseja conectar o esp, junto com o endereço e porta do broker. Também deve se criar o objeto Esp e instanciar o MQTT passando o objeto do ESP como parâmetro.
+Na função de setup,  se coloca funções que irão fazer o Esp se conectar a internet, identificar o broker e também se inicia o dht.
+Na função loop, foram passadas funções que irão pegar os valores dos sensores de umidade, temperatura e luminosidade que irão converte-los para string e então serão publicados nos tópicos. Também será passada uma função que irá verificar constantemente se o esp não perdeu conexão com o broker ou a internet.
 
 # Montagem do ESP
 Ao montar o esp, conectou-se 5, 4 e 23 com os leds Verde, Amarelo e Vermelho. O LCD teve as portas sda e scl conectadas nas portas 21 e 22 e o gnd e vcc no terra e no 3.3v. O DHT foi conectado a porta 15 e ao terra e 3.3v também. O fotoresistor foi conectado ao terra, o 3.3 volts e a porta 2. O buzzer foi conectado ao terra e porta 25.
