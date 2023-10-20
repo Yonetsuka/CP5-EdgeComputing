@@ -10,7 +10,7 @@
 A palavra IOT vem de Internet of Things, que por sua vez significa internet das coisas. Esse conceito se refere auma rede de objetos fisicos, dispositivos, máquinas e outros itens que estão conectados a internet coletar, transmitir e trocar dados entre si e com outros sistemas de computação. Quanto ao Fiware, ele é uma plataforma com o código aberto para ajudar inegrar e gerenciar dados IOT. Seus componentes mais importantes são Context Broker e o IOT agent. O Broker serve para armazenar e gerenciar os dados enquanto o IOT agent facilitam a comunicação com os dispositivos, podendo usar vários protocolos no processo, como o MQTT e o ORION.
 
 # Objetivo do repositório
-Neste repositório, estará sendo mostrado o como subir um servidor utilizando o dockers e o repositório do professor Fabio Cabrini. Haverá duas formas, sendo uma com o auxilio do VMware e a outra utilizando a máquina local.
+Neste repositório, estará sendo mostrado o como subir um servidor utilizando o dockers e o repositório do professor Fabio Cabrini. Haverá duas formas, sendo uma com o auxilio do VMware e a outra utilizando a máquina local. Também será mostrado como o aplicativo MyMqtt para enviar e receber mensagens.
 
 # Guia para Implantação de Contêineres Docker e Execução de Health Check **(Máquina Virtual/VMware)**
 Este repositório fornece instruções passo a passo sobre como implantar contêineres Docker em uma máquina virtual e como executar um health check usando o Postman.
