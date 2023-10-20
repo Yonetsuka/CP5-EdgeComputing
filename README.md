@@ -86,9 +86,13 @@ Este é um aplicativo para celular que usa o protocolo mqtt, e pode ser usado pa
 
 # Explicando o código cp
 Primeiro, deve se importar as bibliotecas WiFi e PubSubClient.
+
 Depois se define os tópicos, que é a principal forma para o publisher e o subscriber trocarem mensagens. Também será necessário definir uma id no código (no caso, 112). 
+
 Em seguida, se coloca o nome da rede e senha que deseja conectar o esp, junto com o endereço e porta do broker. Também deve se criar o objeto Esp e instanciar o MQTT passando o objeto do ESP como parâmetro.
+
 Na função de setup,  se coloca funções que irão fazer o Esp se conectar a internet, identificar o broker e também se inicia o dht.
+
 Na função loop, foram passadas funções que irão pegar os valores dos sensores de umidade, temperatura e luminosidade que irão converte-los para string e então serão publicados nos tópicos. Também será passada uma função que irá verificar constantemente se o esp não perdeu conexão com o broker ou a internet.
 
 # Montagem do ESP
