@@ -95,7 +95,7 @@ Na função loop, foram passadas funções que irão pegar os valores dos sensor
 Ao montar o esp, conectou-se 5, 4 e 23 com os leds Verde, Amarelo e Vermelho. O LCD teve as portas sda e scl conectadas nas portas 21 e 22 e o gnd e vcc no terra e no 3.3v. O DHT foi conectado a porta 15 e ao terra e 3.3v também. O fotoresistor foi conectado ao terra, o 3.3 volts e a porta 2. O buzzer foi conectado ao terra e porta 25.
 
 ## No final da montagem, ele deverá ficar parecido com isso (Imagem pega do Wokwi)
-![Imagem do Esp montado](https://github.com/Yonetsuka/Challenge-3_Sprint/issues/1)
+![Imagem do Esp montado](https://user-images.githubusercontent.com/127115211/277034184-6a5be623-f8e3-4121-8caa-e30206cbec09.png)
 
 ### Links usados 
 
