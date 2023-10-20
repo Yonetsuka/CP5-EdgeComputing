@@ -95,6 +95,8 @@ Na função de setup,  se coloca funções que irão fazer o Esp se conectar a i
 
 Na função loop, foram passadas funções que irão pegar os valores dos sensores de umidade, temperatura e luminosidade que irão converte-los para string e então serão publicados nos tópicos. Também será passada uma função que irá verificar constantemente se o esp não perdeu conexão com o broker ou a internet.
 
+### Observação: Na montagem do Esp foi colocado um display LCD, leds para informar se há algum fator maior ou menor que o normal e usou-se um fotoresistor diferente do que está no código final.
+
 # Montagem do ESP
 Ao montar o esp, conectou-se 5, 4 e 23 com os leds Verde, Amarelo e Vermelho. O LCD teve as portas sda e scl conectadas nas portas 21 e 22 e o gnd e vcc no terra e no 3.3v. O DHT foi conectado a porta 15 e ao terra e 3.3v também. O fotoresistor foi conectado ao terra, o 3.3 volts e a porta 2. O buzzer foi conectado ao terra e porta 25.
 
